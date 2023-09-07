@@ -10,7 +10,7 @@ Receive code suggestions in real time and work on code in the IDE!
 
 - 가이드라인
   
-  - 사용자 등록
+  - 사용자 등록
   
   - 제공 기능 - Code Suggestion in Editor
   
