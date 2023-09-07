@@ -21,7 +21,7 @@ Receive code suggestions in real time and work on code in the IDE!
 
 
 
-##### 서비스 소개
+## 서비스 소개
 
 
 Corus는 효율적으로 코드 작업을 할 수 있도록 도와주는 AI assistant입니다. 
