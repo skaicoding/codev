@@ -24,7 +24,7 @@ Receive code suggestions in real time and work on code in the IDE!
 
 ##### 서비스 소개
 
-![](./images/completionEditor.gif)
+![](./manual/images/completionEditor.gif)
 
 Corus는 효율적으로 코드 작업을 할 수 있도록 도와주는 AI assistant입니다. 
 
@@ -40,15 +40,15 @@ Corus는 효율적으로 코드 작업을 할 수 있도록 도와주는 AI assi
 
 ### 사용자 등록
 
-![](images/apikey.gif)
+![](manual/images/apikey.gif)
 
 해당 페이지로 이동하여, extension 사용을 위해 사용자 등록을 수행합니다. 
 
 Corus를 사용하기 위해서는 사용자 등록 시 발급 받은 `API Key`를 플러그인에 등록해야 합니다.
 
-    1. 왼쪽 사이드 바의 Corus Icon을 클릭 합니다. (<img src="./images/sidebarLogo.png" alt="" width="50">)
+    1. 왼쪽 사이드 바의 Corus Icon을 클릭 합니다. (<img src="./manual/images/sidebarLogo.png" alt="" width="50">)
 
-    2. 상단에 위치한 설정을 선택합니다. (설정 - ![](./images/gearIcon.png))
+    2. 상단에 위치한 설정을 선택합니다. (설정 - ![](./manual/images/gearIcon.png))
 
     3. 설정 탭 내 `API Key` 입력 칸에 발급 받은 `API Key` 를 입력합니다. 
 
@@ -70,7 +70,7 @@ Corus는 효율적으로 코드 작업을 할 수 있도록 도와주는 AI assi
 
 #### 코드 자동 추천 on/off
 
-![](images/statusbar.gif)
+![](manual/images/statusbar.gif)
 
 코드 자동 추천 기능을 on/off 를 다음과 같이 설정할 수 있습니다. 
 
@@ -84,9 +84,9 @@ Corus는 효율적으로 코드 작업을 할 수 있도록 도와주는 AI assi
 
 ### 제공 기능 - Code Completion
 
-![](images/sidebarCompletion.gif)
+![](manual/images/sidebarCompletion.gif)
 
-![](images/menuCompletion.gif)
+![](manual/images/menuCompletion.gif)
 
 사용자가 현재 작업중인 에디터에서 코드 추천을 요청할 수 있습니다.  최대 10건 이내의 추천 결과에서 원하는 코드를 선택할 수 있습니다. 
 
@@ -99,7 +99,7 @@ Corus는 효율적으로 코드 작업을 할 수 있도록 도와주는 AI assi
 -  `마우스 우클릭 > Corus > Completion` 메뉴를 선택합니다.
 
 - 사이드바 completion tab에 위치한 completion 버튼을 클릭 합니다. 
- (<img src="./images/completionButton.png" alt="" width="50">)
+ (<img src="./manual/images/completionButton.png" alt="" width="50">)
 
 
 
