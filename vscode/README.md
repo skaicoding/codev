@@ -2,29 +2,27 @@
 
 Receive code suggestions in real time and work on code in the IDE!
 
-(gif 파일 추가)
+![](./manual/images/completionEditor.gif)
 
 #### Quick Menu:
 
-- 서비스 소개
+- [서비스 소개](#서비스-소개)
 
 - 가이드라인
   
-  - 사용자 등록
+  - [사용자 등록](#사용자-등록)
   
-  - 제공 기능 - Code Suggestion in Editor
+  - [제공 기능 - Code Suggestion in Editor](#제공-기능---editor-상에서-코드-자동-추천-code-suggestion-in-editor)
   
-  - 제공 기능 - Code Completion
+  - [제공 기능 - Code Completion](#제공-기능---code-completion)
 
-- Code Privacy
 
-- FAQ
+- [FAQ](#faq)
 
 
 
 ##### 서비스 소개
 
-![](./manual/images/completionEditor.gif)
 
 Corus는 효율적으로 코드 작업을 할 수 있도록 도와주는 AI assistant입니다. 
 
