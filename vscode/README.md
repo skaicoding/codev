@@ -44,9 +44,9 @@ Corus는 효율적으로 코드 작업을 할 수 있도록 도와주는 AI assi
 
 Corus를 사용하기 위해서는 사용자 등록 시 발급 받은 `API Key`를 플러그인에 등록해야 합니다.
 
-    1. 왼쪽 사이드 바의 Corus Icon을 클릭 합니다. (<img src="./manual/images/sidebarLogo.png" alt="" width="50">)
+    1. 왼쪽 사이드 바의 Corus Icon을 클릭 합니다. (<img src="./manual/images/sidebarLogo.png" alt="" width="24">)
 
-    2. 상단에 위치한 설정을 선택합니다. (설정 - ![](./manual/images/gearIcon.png))
+    2. 상단에 위치한 설정을 선택합니다. (설정 - <img src="./manual/images/gearIcon.png" alt="" width="24">)
 
     3. 설정 탭 내 `API Key` 입력 칸에 발급 받은 `API Key` 를 입력합니다. 
 
