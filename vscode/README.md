@@ -20,6 +20,7 @@ Receive code suggestions in real time and work on code in the IDE!
 - [FAQ](#faq)
 
 
+---
 
 ## 서비스 소개
 
@@ -42,7 +43,7 @@ Corus는 효율적으로 코드 작업을 할 수 있도록 도와주는 AI assi
 
 해당 페이지로 이동하여, extension 사용을 위해 사용자 등록을 수행합니다. 
 
-Corus를 사용하기 위해서는 사용자 등록 시 발급 받은 `API Key`를 플러그인에 등록해야 합니다.
+Corus를 사용하기 위해서는 사용자 등록 시 발급 받은 `API Key`를 플러그인에 등록해야 합니다.
 
     1. 왼쪽 사이드 바의 Corus Icon을 클릭 합니다. (<img src="./manual/images/sidebarLogo.png" alt="" width="24">)
 
