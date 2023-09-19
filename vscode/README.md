@@ -1,4 +1,4 @@
-## Corus: Your AI Assistant In VS Code
+## Codev: Your AI Assistant In VS Code
 
 Receive code suggestions in real time and work on code in the IDE!
 
@@ -25,7 +25,7 @@ Receive code suggestions in real time and work on code in the IDE!
 ## 서비스 소개
 
 
-Corus는 효율적으로 코드 작업을 할 수 있도록 도와주는 AI assistant입니다. 
+Codev는 효율적으로 코드 작업을 할 수 있도록 도와주는 AI assistant입니다. 
 
 - 작업중인 editor에서 실시간 코드 제안을 제공합니다.
 
@@ -43,9 +43,9 @@ Corus는 효율적으로 코드 작업을 할 수 있도록 도와주는 AI assi
 
 해당 페이지로 이동하여, extension 사용을 위해 사용자 등록을 수행합니다. 
 
-Corus를 사용하기 위해서는 사용자 등록 시 발급 받은 `API Key`를 플러그인에 등록해야 합니다.
+Codev를 사용하기 위해서는 사용자 등록 시 발급 받은 `API Key`를 플러그인에 등록해야 합니다.
 
-    1. 왼쪽 사이드 바의 Corus Icon을 클릭 합니다. (<img src="./manual/images/sidebarLogo.png" alt="" width="24">)
+    1. 왼쪽 사이드 바의 Codev Icon을 클릭 합니다. (<img src="./manual/images/sidebarLogo.png" alt="" width="24">)
 
     2. 상단에 위치한 설정을 선택합니다. (설정 - <img src="./manual/images/gearIcon.png" alt="" width="24">)
 
@@ -69,13 +69,13 @@ Corus를 사용하기 위해서는 사용자 등록 시 발급 받은 `API Key`�
 
 #### 코드 자동 추천 on/off
 
-![](manual/images/statusbar.gif)
+![](manual/images/codingStatusbar.gif)
 
 코드 자동 추천 기능을 on/off 를 다음과 같이 설정할 수 있습니다. 
 
 - window: `ctrl+alt+0` / mac: `cmd+option+0` 를 통해 on/off 할 수 있습니다.
 
-- `마우스 우클릭 > Corus > 코드자동추천 허용` 메뉴를 선택하여 on/off 할 수 있습니다.
+- `마우스 우클릭 > Codev > 코드자동추천 허용` 메뉴를 선택하여 on/off 할 수 있습니다.
 
 - 하단 상태바를 클릭하여 on/off 를 설정할 수 있습니다.
 
@@ -95,7 +95,7 @@ Corus를 사용하기 위해서는 사용자 등록 시 발급 받은 `API Key`�
 
 - window: `ctrl+alt+1`  / mac: `cmd+option+1` 을 통해 코드 요청합니다.
 
--  `마우스 우클릭 > Corus > Completion` 메뉴를 선택합니다.
+-  `마우스 우클릭 > Codev > Completion` 메뉴를 선택합니다.
 
 - 사이드바 completion tab에 위치한 completion 버튼을 클릭 합니다. 
  (<img src="./manual/images/completionButton.png" alt="" width="50">)
