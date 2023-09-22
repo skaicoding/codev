@@ -21,7 +21,7 @@ output = False
 debug = False
 cell_id = None
 
-class CorusClient:
+class CodevClient:
     global debug
     username = None
     password = None
@@ -62,7 +62,7 @@ class CorusClient:
         # self.token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOjYsInVzZXJfbmFtZSI6ImhlZXNlb2sgamVvbmciLCJjcmVhdGVkX2F0IjoiMjAyMy0wOS0xMyAwMTo1MjowMCIsImV4cGlyZXNfaW4iOjYwLCJleHAiOjE2OTQ1NzM1MjB9.9T4i3hy4JtP6ZKbVPe_X9WmkZU0AqW7S6umTv2v5uYs'
    
     def __del__(self):
-        print("Corus client reset.")
+        print("Codev client reset.")
 
     def serverStr(self, data):
         server = requests.post(
@@ -106,30 +106,30 @@ class CorusClient:
             
             return None
 
-def connectCorus(username, password):
+def connectCodev(username, password):
     global client
     if client is None:
         # print("client is None ")
-        client = CorusClient(username, password)     
-        print("connected in Corus. ")
+        client = CodevClient(username, password)     
+        print("connected in Codev. ")
     getFilepath()
     get_ipython().events.register('pre_run_cell', pre_run_cell)
 
-def checkCorus():
+def checkCodev():
     global client
     if client is None:
-        print("Corus is none")   
+        print("Codev is none")   
     else:
-        print("Corus is not none.") 
+        print("Codev is not none.") 
        
-def resetCorus(username, password):
+def resetCodev(username, password):
     global client
-    checkCorus()
+    checkCodev()
     if client is not None:
         del client
         client = None
-        # print("Corus client reset.")       
-    connectCorus(username, password)
+        # print("Codev client reset.")       
+    connectCodev(username, password)
 
 def monitor_file_save(file_path, check_interval=1):
     global output
@@ -196,7 +196,7 @@ def end_substring(main_string, sub_string):
   
     # print(f"main_string : ",main_string)
     # print(f"sub_string : ",sub_string)
-    if sub_string in main_string and 'corus_magic' in main_string :
+    if sub_string in main_string and 'codev_magic' in main_string :
         result = '<<END>>'
         # print(f"===> result if :  true")
     else:
@@ -266,7 +266,7 @@ def newCell(contents):
     shell.payload_manager.write_payload(payload, single=False)
 
 def selfCell(contents):
-    contents = "# %%corus_magic1  \n" + contents
+    contents = "# %%codev_magic1  \n" + contents
     from IPython.core.getipython import get_ipython
     shell = get_ipython()
     payload = dict(
@@ -324,7 +324,7 @@ def get_cell_infos(ipynb_file_path, runCell):
                 if cell.cell_type == 'code' and cell.execution_count != None:
                     execution_counts.append(cell.execution_count)
                     # sources.append("#  Cell ID : [" + str(cell.execution_count) + "]  #")
-                    if 'corus_magic' not in cell.source:
+                    if 'codev_magic' not in cell.source:
                         sources.append(cell.source)
             else:
                 break                   
@@ -351,7 +351,7 @@ def get_cell_infos1(ipynb_file_path , runCell):
             if cell.cell_type == 'code' and cell.execution_count != None:
                 execution_counts.append(cell.execution_count)
                 # sources.append("#  Cell ID : [" + str(cell.execution_count) + "]  #")
-                if 'corus_magic' not in cell.source:
+                if 'codev_magic' not in cell.source:
                     sources.append(cell.source)
 
 
@@ -383,8 +383,8 @@ def get_cell_infos2(ipynb_file_path , runCell):
             # print(f"-------- cell.id : " , cell.id )  # 검증x
             if cell.cell_type == 'code':
 
-                # corus_magic 있는 cell 경우는 runCell 일 경우만 치환하고 append 한다.
-                if 'corus_magic' in cell.source:
+                # codev_magic 있는 cell 경우는 runCell 일 경우만 치환하고 append 한다.
+                if 'codev_magic' in cell.source:
                     # <<END>> 치환
                     cellStr = end_substring(cell.source , runCell.strip() )
                     # # print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
@@ -396,7 +396,7 @@ def get_cell_infos2(ipynb_file_path , runCell):
                     if "<<END>>" in cellStr: 
                         sources.append(cellStr)
                         break
-                else: # corus_magic 없고 cell 이 not None 경우만 append 한다.
+                else: # codev_magic 없고 cell 이 not None 경우만 append 한다.
                     if cell.execution_count != None:
                         execution_counts.append(cell.execution_count)
                         sources.append(cell.source)
@@ -407,7 +407,7 @@ def get_cell_infos2(ipynb_file_path , runCell):
         return [],[]
         
 # saveCurrentFile -> sleep 1초 -> runCell execution_count 이 null 로 넘어온다. # windows 실행시
-# cell.source 이 null and corus_magic 경우 => <<END>> 치환한다. 
+# cell.source 이 null and codev_magic 경우 => <<END>> 치환한다. 
 def get_cell_infos3(ipynb_file_path , runCell):
     try:
         # os.system(f'jupyter nbconvert --execute --to notebook  {ipynb_file_path} ')
@@ -434,11 +434,11 @@ def get_cell_infos3(ipynb_file_path , runCell):
                     execution_counts.append(cell.execution_count)
                     # sources.append("#  Cell ID : [" + str(cell.execution_count) + "]  #")
                     # contexts = remove_substring(contexts, cell.strip())
-                    if 'corus_magic' not in cell.source:
+                    if 'codev_magic' not in cell.source:
                         sources.append(cell.source)
-                else: # null and corus_magic 경우 => <<END>>  # saveCurrentFile 실행시 null 로직                           
+                else: # null and codev_magic 경우 => <<END>>  # saveCurrentFile 실행시 null 로직                           
                     # magic command 포함된 cell 은 제외
-                    if 'corus_magic' in cell.source:
+                    if 'codev_magic' in cell.source:
                         # <<END>> 치환
                         cellStr = end_substring(cell.source , runCell.strip() )
                         # print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
@@ -553,18 +553,18 @@ def pre_run_cell(info):
     # print(f"pre_run_cell is registered" )
 
 @register_cell_magic
-def corus_magic1(line, cell):
+def codev_magic1(line, cell):
     global cell_id
     # print(f"--1 cell_id : ",cell_id) # 검증
-    process_corus_magic(line, cell, selfCell)
+    process_codev_magic(line, cell, selfCell)
 
 @register_cell_magic
-def corus_magic2(line, cell):
+def codev_magic2(line, cell):
     global cell_id
     # print(f"--2 cell_id : ",cell_id) # 검증
-    process_corus_magic(line, cell, newCell)
+    process_codev_magic(line, cell, newCell)
 
-def process_corus_magic(line, cell, completion_func):
+def process_codev_magic(line, cell, completion_func):
     global client
     global filepath
     global output
@@ -584,16 +584,16 @@ def process_corus_magic(line, cell, completion_func):
     
     check_option(line)
     if debug:
-        process_corus_magin_body(line, cell, completion_func)
+        process_codev_magin_body(line, cell, completion_func)
     else:        
         try:
-            process_corus_magin_body(line, cell, completion_func)
+            process_codev_magin_body(line, cell, completion_func)
         except Exception as e:
             # Handle the exception here, you can print an error message or take appropriate action
             print(f"An error occurred: {str(e)}")
     
 
-def process_corus_magin_body(line, cell, completion_func): 
+def process_codev_magin_body(line, cell, completion_func): 
     # 서버에서 1,2 안됨
     # saveCurrentFile3()
     monitor_file_save(filepath)
@@ -612,7 +612,7 @@ def process_corus_magin_body(line, cell, completion_func):
         
         # 자신 cell 내용과 같은 cell 제외> -> magic command 포함된 cell 은 제외 (get_cell_infos2)
         # contexts = remove_substring(contexts, cell.strip())
-        # magic command 시작하는 cell 은 제외 -> corus_magic 만 제외 (get_cell_infos2)
+        # magic command 시작하는 cell 은 제외 -> codev_magic 만 제외 (get_cell_infos2)
         # contexts = remove_lines_starting_with_substring(contexts, "%%")
 
         # get_cell_infos2, 3 적용
@@ -634,8 +634,8 @@ def process_corus_magin_body(line, cell, completion_func):
     # 변수 사용시 적용
 
     # if client is None:
-    #     print("Please login : connectCorus(username,password) ")
-        # client = CorusClient(username, passwd)
+    #     print("Please login : connectCodev(username,password) ")
+        # client = CodevClient(username, passwd)
     if client:
         # print(" client is exist ")
         if output == True:
@@ -646,7 +646,7 @@ def process_corus_magin_body(line, cell, completion_func):
         if completionStr is not None:
             completion_func(completionStr)
     else:
-        print("Please login : connectCorus(username,password) ")
+        print("Please login : connectCodev(username,password) ")
 
 
 
