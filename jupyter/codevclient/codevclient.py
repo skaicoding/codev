@@ -20,6 +20,7 @@ historyStr = None
 output = False
 debug = False
 cell_id = None
+start_time = None
 
 class CodevClient:
     global debug
@@ -568,7 +569,8 @@ def process_codev_magic(line, cell, completion_func):
     global client
     global filepath
     global output
-
+    global start_time
+    start_time = time.time()
     # history 사용
     # contexts = capture_history_with_timestamps()
     # contexts = remove_substring(contexts, cell)
@@ -583,6 +585,7 @@ def process_codev_magic(line, cell, completion_func):
         #     print(f"output : ", output)
     
     check_option(line)
+    # print(f"---- check_option : " , time.time() - start_time)
     if debug:
         process_codev_magin_body(line, cell, completion_func)
     else:        
@@ -594,17 +597,21 @@ def process_codev_magic(line, cell, completion_func):
     
 
 def process_codev_magin_body(line, cell, completion_func): 
+    global start_time
+
     # 서버에서 1,2 안됨
-    # saveCurrentFile3()
+    saveCurrentFile3()
+    print(f"---- saveCurrentFile3 : " , time.time() - start_time)
     monitor_file_save(filepath)
     # keyboard.press_and_release('ctrl+s')
+    print(f"---- monitor_file_save : " , time.time() - start_time)
     
     if filepath:
         # print(f" filepath is exist : ", filepath)
         # print(get_cell_sources(filepath))
         execution_counts, sources = get_cell_infos2(filepath, cell)
         # print("Execution counts:", execution_counts)
-
+        print(f"---- get_cell_infos2 : " , time.time() - start_time)
         contexts = '\n'.join(sources)
         
         # <<HERE>> 제거 -> magic command 포함된 cell 은 제외 ( get_cell_infos2)
@@ -612,14 +619,16 @@ def process_codev_magin_body(line, cell, completion_func):
         
         # 자신 cell 내용과 같은 cell 제외> -> magic command 포함된 cell 은 제외 (get_cell_infos2)
         # contexts = remove_substring(contexts, cell.strip())
-        # magic command 시작하는 cell 은 제외 -> codev_magic 만 제외 (get_cell_infos2)
+        # magic command 시작하는 cell 은 제외 -> corus_magic 만 제외 (get_cell_infos2)
         # contexts = remove_lines_starting_with_substring(contexts, "%%")
 
         # get_cell_infos2, 3 적용
         # 싫행 cell 을  <<END>>  로 치환
         contexts = join_lines_up_to_substring(contexts, "<<END>>")
+        print(f"---- join_lines_up_to_substring : " , time.time() - start_time)
         # <<END>> 제거
         contexts = remove_substring(contexts, "<<END>>")  
+        print(f"---- remove_substring : " , time.time() - start_time)
         
     # print(contexts)
     
@@ -631,6 +640,7 @@ def process_codev_magin_body(line, cell, completion_func):
 
         # print(f"==================================================================================== ")
         print(f"===> contexts :\n",contexts)
+        print(f"---- contexts : " , time.time() - start_time)
     # 변수 사용시 적용
 
     # if client is None:
@@ -643,12 +653,12 @@ def process_codev_magin_body(line, cell, completion_func):
         # prompt = f"{contexts}\n{cell}"
         # print(f" prompt : ", prompt)
         completionStr = client.completion(contexts, cell)
+        print(f"---- completion : " , time.time() - start_time)
         if completionStr is not None:
             completion_func(completionStr)
+            print(f"---- completion_func : " , time.time() - start_time)
     else:
         print("Please login : connectCodev(username,password) ")
-
-
 
 from IPython.core.magic import register_line_magic
 last_cell_run = None
