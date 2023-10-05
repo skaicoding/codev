@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.skcc.plugin.aicoding_0.9.0.jar" id="com.skcc.plugin.aicoding" version="0.9.0" os="macosx,win32" nl="en,ko" arch="x86_64">
+      <category name="Codev"/>
+   </feature>
+   <category-def name="Codev" label="Codev Plugin Features">
+      <description>
+         Codev is an Eclipse plugin providing features such as code recommendation, completion, comment generation, test code generation, and more.
+      </description>
+   </category-def>
+</site>
