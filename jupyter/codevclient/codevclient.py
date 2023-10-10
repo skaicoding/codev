@@ -663,7 +663,6 @@ def process_codev_magin_body(line, cell, completion_func):
             print(f"☞---- completion : { time.time() - start_time } 초")
         if completionStr is not None:
             completion_func(completionStr)
-            show_tabs(completionStrList)
         if debug:
             print(f"☞---- completion_func : { time.time() - start_time } 초")
     else:
