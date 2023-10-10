@@ -658,7 +658,7 @@ def process_codev_magin_body(line, cell, completion_func):
             print(f"===> code :\n",cell)
         # prompt = f"{contexts}\n{cell}"
         # print(f" prompt : ", prompt)
-        completionStr , completionStrList = client.completion(contexts, cell)
+        completionStr = client.completion(contexts, cell)
         if debug:
             print(f"☞---- completion : { time.time() - start_time } 초")
         if completionStr is not None:
