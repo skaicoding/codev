@@ -20,9 +20,7 @@ Jupyterlab 용 Code Completion  pip 패키지 소스 입니다.
     
 - github 주소 : [**https://github.com/skaicoding/codev/tree/master**](https://github.com/skaicoding/codev/tree/master)
 
-![Untitled](manual/images/Untitled.png)
-
-:
+![Untitled](manual/images/github_list.png)
 
 ---
 
@@ -32,7 +30,7 @@ Jupyterlab 용 Code Completion  pip 패키지 소스 입니다.
 
 - 사용자 등록한 username, password 사용
     
-    ![Untitled](manual/images/Untitled%201.png)
+    ![connectCodev](manual/images/connectCodev.png)
     
 
 ### **기존 Cell 에 code 추천받기**
@@ -41,11 +39,11 @@ Jupyterlab 용 Code Completion  pip 패키지 소스 입니다.
     
     : 실행전
     
-    ![Untitled](manual/images/Untitled%202.png)
+    ![codevmagic1](manual/images/codevmagic1.png)
     
     :실행후 (code 추천)
     
-    ![Untitled](manual/images/Untitled%203.png)
+    ![codevmagic1_result](manual/images/codevmagic1_result.png)
     
 
 ### **새로운 Cell 에  code 추천받기**
@@ -54,11 +52,11 @@ Jupyterlab 용 Code Completion  pip 패키지 소스 입니다.
     
     : 실행전
     
-    ![Untitled](manual/images/Untitled%204.png)
+    ![codevmagic2](manual/images/codevmagic2.png)
     
     : 실행후 (code 추천)
     
-    ![Untitled](manual/images/Untitled%205.png)
+    ![codevmagic2_result](manual/images/codevmagic2_result.png)
     
 
 ### **Contexts output 보기**
@@ -75,7 +73,7 @@ Jupyterlab 용 Code Completion  pip 패키지 소스 입니다.
     
     : completion - 추천 Code
     
-    ![Untitled (4-1).png](manual/images/Untitled_(4-1).png)
+    ![output_codevmagic.png](manual/images/output_codevmagic.png)
     
 
 ### 추천 Code 위치 지정하기
@@ -84,15 +82,15 @@ Jupyterlab 용 Code Completion  pip 패키지 소스 입니다.
     
     : 실행전
     
-    ![Untitled (2-1).png](manual/images/Untitled_(2-1).png)
+    ![here_codevmagic.png](manual/images/here_codevmagic.png)
     
     :실행후 (code 추천)
     
-    ![Untitled (3-1).png](manual/images/Untitled_(3-1).png)
+    ![here_codevmagic-result.png](manual/images/here_codevmagic_result.png)
     
 
 ### Kernel 초기화하기
 
 - Codev Client 지속적인 오류가 발생할 때 Kernel 초기화
 
-![Untitled](manual/images/Untitled%206.png)
+![kernelRestart](manual/images/kernelRestart.png)
