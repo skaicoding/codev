@@ -1,6 +1,4 @@
-# 4. JupyterLab 설정하기
-
-[Home으로 돌아가기](https://www.notion.so/SKCC-AICoding-2-Next-Rel-388568bc0af54e3da02ac02c8f088573?pvs=21)
+# JupyterLab 설정하기
 
 Jupyterlab 용 Code Completion  pip 패키지 소스 입니다.  
 
