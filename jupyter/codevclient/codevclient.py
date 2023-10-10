@@ -597,21 +597,24 @@ def process_codev_magic(line, cell, completion_func):
     
 
 def process_codev_magin_body(line, cell, completion_func): 
-    global start_time
+    # global start_time
 
     # 서버에서 1,2 안됨
     saveCurrentFile3()
-    print(f"---- saveCurrentFile3 : " , time.time() - start_time)
+    if debug:
+        print(f"☞---- saveCurrentFile3 : { time.time() - start_time } 초")
     monitor_file_save(filepath)
     # keyboard.press_and_release('ctrl+s')
-    print(f"---- monitor_file_save : " , time.time() - start_time)
+    if debug:
+        print(f"☞---- monitor_file_save : { time.time() - start_time } 초")
     
     if filepath:
         # print(f" filepath is exist : ", filepath)
         # print(get_cell_sources(filepath))
         execution_counts, sources = get_cell_infos2(filepath, cell)
         # print("Execution counts:", execution_counts)
-        print(f"---- get_cell_infos2 : " , time.time() - start_time)
+        if debug:
+            print(f"☞---- get_cell_infos2 : { time.time() - start_time } 초")
         contexts = '\n'.join(sources)
         
         # <<HERE>> 제거 -> magic command 포함된 cell 은 제외 ( get_cell_infos2)
@@ -625,10 +628,12 @@ def process_codev_magin_body(line, cell, completion_func):
         # get_cell_infos2, 3 적용
         # 싫행 cell 을  <<END>>  로 치환
         contexts = join_lines_up_to_substring(contexts, "<<END>>")
-        print(f"---- join_lines_up_to_substring : " , time.time() - start_time)
+        if debug:
+            print(f"☞---- join_lines_up_to_substring : { time.time() - start_time } 초")
         # <<END>> 제거
         contexts = remove_substring(contexts, "<<END>>")  
-        print(f"---- remove_substring : " , time.time() - start_time)
+        if debug:
+            print(f"☞---- remove_substring : { time.time() - start_time } 초")
         
     # print(contexts)
     
@@ -640,7 +645,8 @@ def process_codev_magin_body(line, cell, completion_func):
 
         # print(f"==================================================================================== ")
         print(f"===> contexts :\n",contexts)
-        print(f"---- contexts : " , time.time() - start_time)
+        # if debug:
+        #     print(f"---- contexts :{ time.time() - start_time } 초")
     # 변수 사용시 적용
 
     # if client is None:
@@ -652,11 +658,14 @@ def process_codev_magin_body(line, cell, completion_func):
             print(f"===> code :\n",cell)
         # prompt = f"{contexts}\n{cell}"
         # print(f" prompt : ", prompt)
-        completionStr = client.completion(contexts, cell)
-        print(f"---- completion : " , time.time() - start_time)
+        completionStr , completionStrList = client.completion(contexts, cell)
+        if debug:
+            print(f"☞---- completion : { time.time() - start_time } 초")
         if completionStr is not None:
             completion_func(completionStr)
-            print(f"---- completion_func : " , time.time() - start_time)
+            show_tabs(completionStrList)
+        if debug:
+            print(f"☞---- completion_func : { time.time() - start_time } 초")
     else:
         print("Please login : connectCodev(username,password) ")
 
