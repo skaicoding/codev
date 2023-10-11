@@ -603,10 +603,10 @@ def process_codev_magin_body(line, cell, completion_func):
     saveCurrentFile3()
     if debug:
         print(f"☞---- saveCurrentFile3 : { time.time() - start_time } 초")
-    monitor_file_save(filepath)
-    # keyboard.press_and_release('ctrl+s')
-    if debug:
-        print(f"☞---- monitor_file_save : { time.time() - start_time } 초")
+    # monitor_file_save(filepath)
+    # # keyboard.press_and_release('ctrl+s')
+    # if debug:
+    #     print(f"☞---- monitor_file_save : { time.time() - start_time } 초")
     
     if filepath:
         # print(f" filepath is exist : ", filepath)
