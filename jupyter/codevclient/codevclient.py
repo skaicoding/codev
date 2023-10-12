@@ -89,13 +89,17 @@ class CodevClient:
             }
             server = self.serverStr(data)            
             if debug:
-                print(f"===> server.json() :\n", server.json())
-
+                print('\033[31m' + f"☞---- server.json() :\n  {server.json() }" + '\033[0m')
+                print('\033[31m' + f"☞---- server requests.post time : { time.time() - start_time } 초" + '\033[0m')
+    
             #토큰 만료되면 재접속 한다.             
             if str(server.json()['code'])  == "-1002":
                 self.connect(self.username, self.password)
                 # self.connect2(self.userkey)
-                server = self.serverStr(data)                
+                server = self.serverStr(data)   
+                
+                if debug:
+                    print('\033[31m' + f"☞---- reconnect time : { time.time() - start_time } 초" + '\033[0m')                               
 
             completionStr = server.json()['data'][0]['text']
             
@@ -588,6 +592,7 @@ def process_codev_magic(line, cell, completion_func):
     # print(f"---- check_option : " , time.time() - start_time)
     if debug:
         process_codev_magin_body(line, cell, completion_func)
+        print('\033[31m' + f"☞---- process_codev_magic time : { time.time() - start_time } 초" + '\033[0m')
     else:        
         try:
             process_codev_magin_body(line, cell, completion_func)
@@ -602,19 +607,20 @@ def process_codev_magin_body(line, cell, completion_func):
     # 서버에서 1,2 안됨
     saveCurrentFile3()
     if debug:
-        print(f"☞---- saveCurrentFile3 : { time.time() - start_time } 초")
-    # monitor_file_save(filepath)
-    # # keyboard.press_and_release('ctrl+s')
+        print('\033[31m' + f"☞---- saveCurrentFile3 : { time.time() - start_time } 초" + '\033[0m')
+
+    # keyboard.press_and_release('ctrl+s')
     # if debug:
-    #     print(f"☞---- monitor_file_save : { time.time() - start_time } 초")
-    
+    #     monitor_file_save(filepath)
+    #     print(f"☞---- monitor_file_save(on) : { time.time() - start_time } 초")
+
     if filepath:
         # print(f" filepath is exist : ", filepath)
         # print(get_cell_sources(filepath))
         execution_counts, sources = get_cell_infos2(filepath, cell)
         # print("Execution counts:", execution_counts)
         if debug:
-            print(f"☞---- get_cell_infos2 : { time.time() - start_time } 초")
+            print('\033[31m' + f"☞---- get_cell_infos2 : { time.time() - start_time } 초" + '\033[0m')
         contexts = '\n'.join(sources)
         
         # <<HERE>> 제거 -> magic command 포함된 cell 은 제외 ( get_cell_infos2)
@@ -629,11 +635,11 @@ def process_codev_magin_body(line, cell, completion_func):
         # 싫행 cell 을  <<END>>  로 치환
         contexts = join_lines_up_to_substring(contexts, "<<END>>")
         if debug:
-            print(f"☞---- join_lines_up_to_substring : { time.time() - start_time } 초")
+            print('\033[31m' + f"☞---- join_lines_up_to_substring : { time.time() - start_time } 초" + '\033[0m')
         # <<END>> 제거
         contexts = remove_substring(contexts, "<<END>>")  
         if debug:
-            print(f"☞---- remove_substring : { time.time() - start_time } 초")
+            print('\033[31m' + f"☞---- remove_substring : { time.time() - start_time } 초" + '\033[0m')
         
     # print(contexts)
     
@@ -645,8 +651,8 @@ def process_codev_magin_body(line, cell, completion_func):
 
         # print(f"==================================================================================== ")
         print(f"===> contexts :\n",contexts)
-        # if debug:
-        #     print(f"---- contexts :{ time.time() - start_time } 초")
+        if debug:
+            print('\033[31m'  + f"☞---- print contexts  :{ time.time() - start_time } 초" + '\033[0m')
     # 변수 사용시 적용
 
     # if client is None:
@@ -656,15 +662,16 @@ def process_codev_magin_body(line, cell, completion_func):
         # print(" client is exist ")
         if output == True:
             print(f"===> code :\n",cell)
+            if debug:
+                print('\033[31m' + f"☞---- print code : { time.time() - start_time } 초" + '\033[0m')
         # prompt = f"{contexts}\n{cell}"
         # print(f" prompt : ", prompt)
         completionStr = client.completion(contexts, cell)
         if debug:
-            print(f"☞---- completion : { time.time() - start_time } 초")
+            print('\033[31m' + f"☞---- completion : { time.time() - start_time } 초" + '\033[0m')
         if completionStr is not None:
             completion_func(completionStr)
-        if debug:
-            print(f"☞---- completion_func : { time.time() - start_time } 초")
+
     else:
         print("Please login : connectCodev(username,password) ")
 
@@ -677,4 +684,3 @@ def cellId(line):
     last_cell_run = get_ipython().execution_count
     # print( f"{last_cell_run}")
     return f"{last_cell_run}"
-
