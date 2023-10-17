@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?artifactRepository version='1.1.0'?>
-<repository name='SKCC Codev' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1'>
+<repository name='Exported Repository' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1'>
   <properties size='2'>
-    <property name='p2.timestamp' value='1697506580906'/>
+    <property name='p2.timestamp' value='1697516129112'/>
     <property name='p2.compressed' value='true'/>
   </properties>
   <mappings size='3'>
