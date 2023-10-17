@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/com.skcc.plugin.aicoding_0.9.2.jar" id="com.skcc.plugin.aicoding" version="0.9.2">
+   <description name="SKCC Codev" url="https://skaicoding.github.io/codev/">
+      Welcome to our code assistance tool!
+Here are the features we provide :
+- Code Completion: Get code recommendations and autocompletion while you write code.
+- (Upcoming) Code Explanation: Understand and analyze your code with detailed explanations.
+- (Upcoming) Comment Generation : Generate helpful comments for your code.
+- (Upcoming) Test Code Generation : Automatically generate test code for your projects.
+- (Upcoming) Code Translation : Translate your code to different programming languages.
+- (Upcoming) Bug Fix : Detect and fix bugs in your code for improved stability.
+- (Upcoming) Chat-style Functionality : Interact with our tool using natural language to get real-time assistance.  
+With these features, we aim to enhance your coding experience and boost your productivity. If you have any questions or need further assistance, feel free to ask!
+   </description>
+   <feature url="features/com.skcc.plugin.aicoding_0.9.3.jar" id="com.skcc.plugin.aicoding" version="0.9.3" os="linux,macosx,win32" arch="x86_64">
       <category name="Codev"/>
    </feature>
    <category-def name="Codev" label="Codev Plugin Features">
