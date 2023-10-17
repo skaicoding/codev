@@ -1,0 +1,200 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?metadataRepository version='1.2.0'?>
+<repository name='SKCC Codev' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1'>
+  <properties size='2'>
+    <property name='p2.timestamp' value='1697506580916'/>
+    <property name='p2.compressed' value='true'/>
+  </properties>
+  <units size='5'>
+    <unit id='aicoding_dependencies' version='0.9.3' singleton='false' generation='2'>
+      <update id='aicoding_dependencies' range='[0.0.0,0.9.3)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Codev'/>
+        <property name='org.eclipse.equinox.p2.provider' value='skcc'/>
+      </properties>
+      <provides size='50'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='aicoding_dependencies' version='0.9.3'/>
+        <provided namespace='osgi.bundle' name='aicoding_dependencies' version='0.9.3'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.annotation' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.core' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.core.async' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.core.base' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.core.exc' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.core.filter' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.core.format' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.core.io' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.core.io.doubleparser' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.core.io.schubfach' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.core.json' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.core.json.async' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.core.sym' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.core.type' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.core.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.annotation' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.cfg' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.deser' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.deser.impl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.deser.std' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.exc' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.ext' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.introspect' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.jdk14' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.json' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.jsonFormatVisitors' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.jsonschema' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.jsontype' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.jsontype.impl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.module' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.node' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.ser' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.ser.impl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.ser.std' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.type' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.util.internal' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.text' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.text.diff' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.text.io' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.text.lookup' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.text.matcher' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.text.numbers' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.text.similarity' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.text.translate' version='0.0.0'/>
+        <provided namespace='osgi.identity' name='aicoding_dependencies' version='0.9.3'>
+          <properties size='1'>
+            <property name='type' value='osgi.bundle'/>
+          </properties>
+        </provided>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='1'>
+        <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.8))'>
+          <description>
+            aicoding_dependencies
+          </description>
+        </requiredProperties>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='aicoding_dependencies' version='0.9.3'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: aicoding_dependencies&#xA;Bundle-Version: 0.9.3
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='aicoding_main' version='0.9.3' generation='2'>
+      <update id='aicoding_main' range='[0.0.0,0.9.3)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Codev'/>
+        <property name='org.eclipse.equinox.p2.provider' value='skcc'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='aicoding_main' version='0.9.3'/>
+        <provided namespace='osgi.bundle' name='aicoding_main' version='0.9.3'/>
+        <provided namespace='osgi.identity' name='aicoding_main' version='0.9.3'>
+          <properties size='1'>
+            <property name='type' value='osgi.bundle'/>
+          </properties>
+        </provided>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='12'>
+        <required namespace='osgi.bundle' name='org.eclipse.swt' range='3.114.100'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='3.117.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='3.13.700'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jface.text' range='3.16.300'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='3.18.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.workbench.texteditor' range='3.14.200'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='3.17.100'/>
+        <required namespace='osgi.bundle' name='org.apache.httpcomponents.httpclient' range='4.5.10'/>
+        <required namespace='osgi.bundle' name='org.apache.httpcomponents.httpcore' range='4.4.12'/>
+        <required namespace='osgi.bundle' name='aicoding_dependencies' range='0.9.3'/>
+        <required namespace='java.package' name='org.eclipse.mylyn.commons.ui.dialogs' range='0.0.0'/>
+        <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.8))'>
+          <description>
+            aicoding_main
+          </description>
+        </requiredProperties>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='aicoding_main' version='0.9.3'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: aicoding_main;singleton:=true&#xA;Bundle-Version: 0.9.3
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.skcc.plugin.aicoding.feature.jar' version='0.9.3'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Codev'/>
+        <property name='org.eclipse.equinox.p2.provider' value='skcc'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.skcc.plugin.aicoding.feature.jar' version='0.9.3'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='com.skcc.plugin.aicoding' version='0.9.3'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='com.skcc.plugin.aicoding' version='0.9.3'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.skcc.plugin.aicoding.feature.group' version='0.9.3' singleton='false'>
+      <update id='com.skcc.plugin.aicoding.feature.group' range='[0.0.0,0.9.3)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Codev'/>
+        <property name='org.eclipse.equinox.p2.provider' value='skcc'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.skcc.plugin.aicoding.feature.group' version='0.9.3'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='aicoding_dependencies' range='[0.9.3,0.9.3]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='aicoding_main' range='[0.9.3,0.9.3]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='com.skcc.plugin.aicoding.feature.jar' range='[0.9.3,0.9.3]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='Codev' version='1.0.0.07G5cJk4vh'>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Codev Plugin Features'/>
+        <property name='org.eclipse.equinox.p2.description' value='Codev is an Eclipse plugin providing features such as code recommendation, completion, comment generation, test code generation, and more.'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='Codev' version='1.0.0.07G5cJk4vh'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='com.skcc.plugin.aicoding.feature.group' range='[0.9.3,0.9.3]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+  </units>
+</repository>
