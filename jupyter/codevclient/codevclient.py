@@ -64,8 +64,8 @@ class CodevClient:
         # # self.token = output['access_token']
         # self.token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOjYsInVzZXJfbmFtZSI6ImhlZXNlb2sgamVvbmciLCJjcmVhdGVkX2F0IjoiMjAyMy0wOS0xMyAwMTo1MjowMCIsImV4cGlyZXNfaW4iOjYwLCJleHAiOjE2OTQ1NzM1MjB9.9T4i3hy4JtP6ZKbVPe_X9WmkZU0AqW7S6umTv2v5uYs'
    
-    def __del__(self):
-        print("Codev client reset.")
+    #def __del__(self):
+    #    print("Codev client reset.")
 
     def serverStr(self, data):
         server = requests.post(
@@ -115,13 +115,16 @@ class CodevClient:
             return None
 
 def connectCodev(username, password):
-    global client
-    if client is None:
-        # print("client is None ")
-        client = CodevClient(username, password)     
-        print("connected in Codev. ")
-    getFilepath()
-    get_ipython().events.register('pre_run_cell', pre_run_cell)
+    try:
+        global client
+        if client is None:
+            # print("client is None ")
+            client = CodevClient(username, password)     
+            print("connected in Codev. ")
+        getFilepath()
+        get_ipython().events.register('pre_run_cell', pre_run_cell)
+    except Exception as e:
+        print("로그인이 실패하였습니다.:", "로그인 정보를 확인해 주세요.")
 
 def checkCodev():
     global client
