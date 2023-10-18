@@ -120,7 +120,7 @@ def connectCodev(username, password):
         if client is None:
             # print("client is None ")
             client = CodevClient(username, password)     
-            print("connected in Codev. ")
+            print("CODEV 서비스에 연결되었습니다.")
         getFilepath()
         get_ipython().events.register('pre_run_cell', pre_run_cell)
     except Exception as e:
@@ -129,9 +129,9 @@ def connectCodev(username, password):
 def checkCodev():
     global client
     if client is None:
-        print("Codev is none")   
+        print("CODEV is none")   
     else:
-        print("Codev is not none.") 
+        print("CODEV is not none.") 
        
 def resetCodev(username, password):
     global client
@@ -139,7 +139,7 @@ def resetCodev(username, password):
     if client is not None:
         del client
         client = None
-        # print("Codev client reset.")       
+        # print("CODEV client reset.")       
     connectCodev(username, password)
 
 def monitor_file_save(file_path, check_interval=1):
