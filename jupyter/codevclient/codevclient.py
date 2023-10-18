@@ -124,7 +124,7 @@ def connectCodev(username, password):
         getFilepath()
         get_ipython().events.register('pre_run_cell', pre_run_cell)
     except Exception as e:
-        print("로그인이 실패하였습니다.:", "로그인 정보를 확인해 주세요.")
+        print("CODEV 서비스를 연결할 수 없습니다.:", "사용자 정보를 확인해 주세요.")
 
 def checkCodev():
     global client
