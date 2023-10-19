@@ -394,8 +394,8 @@ def get_cell_infos2(ipynb_file_path , runCell):
             # print(f"-------- cell.id : " , cell.id )  # 검증x
             if cell.cell_type == 'code':
 
-                # codev_magic 있는 cell 경우는 runCell 일 경우만 치환하고 append 한다.
-                if 'codev_magic' in cell.source:
+                # codev 있는 cell 경우는 runCell 일 경우만 치환하고 append 한다.
+                if 'codev' in cell.source:
                     # <<END>> 치환
                     cellStr = end_substring(cell.source , runCell.strip() )
                     # # print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
