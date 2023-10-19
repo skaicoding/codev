@@ -12,6 +12,10 @@ Eclipse IDE에서 ZIP 파일로부터 플러그인을 설치하려면 다음 단
 8. 이제 ZIP 파일에서 제공하는 플러그인들이 목록에 표시됩니다. 원하는 플러그인을 선택하십시오.
 9. 'Next' 버튼을 클릭하고 설치 지침에 따라 진행하세요.
 
-**Note:** 설치 과정 중 보안 경고나 서명되지 않은 내용과 관련된 문제가 발생할 경우, 위의 "Installation Instructions" 섹션에 있는 추가 단계를 따라 문제를 해결하십시오.
+**Note:** 설치 과정 중 보안 경고나 서명되지 않은 내용과 관련된 문제가 발생할 경우, 다음의 추가 단계를 따라 문제를 해결하십시오:
+1. 'Install' 대화 상자에서 'Available Software Sites' 링크를 클릭하세요.
+2. 'Contact all update sites during install to find required software' 옵션의 체크를 해제하세요.
+3. 'OK'를 클릭하고 설치를 계속 진행하세요.
+
 
 설치를 완료한 후 Eclipse IDE를 재시작하면 새로 설치한 플러그인을 사용할 수 있습니다.
