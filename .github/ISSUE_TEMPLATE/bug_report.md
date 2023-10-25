@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: 개선에 도움이 되는 보고서 작성
+about: 오류 수정에 도움이 되는 보고서 작성
 title: ''
 labels: ''
 assignees: ''
