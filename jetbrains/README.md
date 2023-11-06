@@ -6,7 +6,7 @@
 플러그인의 기능을 사용하기 위해서는 사용자 등록 시 발급 받은 `API Key`를 플러그인에 등록해야 합니다.
 
 #### 등록 방법
-1. `Codev` 툴 윈도우를 열고 `Config` 탭을 클릭합니다.
+1. `CODEV` 툴 윈도우를 열고 `Config` 탭을 클릭합니다.
 2. `Config` 탭 내 `API Key 입력` 부분에 발급 받은 `API Key`를 입력합니다.
 ![API Key](./manual/images/inputAPIKey.gif)
 
@@ -15,8 +15,8 @@
 사용자가 현재 파일의 사용 중인 코드와 관련된 추천 코드를 요청하고, 10건 이내의 추천 결과에서 원하는 코드를 선택할 수 있는 기능입니다.
 
 #### 사용 방법
-1. 코드 파일을 열고, 커서가 있는 위치에서 단축키 `ctrl+alt+1` 또는 `마우스 우클릭 > Codev > Completion` 메뉴를 선택합니다.
-2. `Codev` 툴 윈도우에 결과가 출력되고, 추천 코드 아래에 있는 `Accept` 링크를 누르면 해당 코드가 반영됩니다.  
+1. 코드 파일을 열고, 커서가 있는 위치에서 단축키 `ctrl+alt+1` 또는 `마우스 우클릭 > CODEV > Completion` 메뉴를 선택합니다.
+2. `CODEV` 툴 윈도우에 결과가 출력되고, 추천 코드 아래에 있는 `Accept` 링크를 누르면 해당 코드가 반영됩니다.  
 ![Code Completion](./manual/images/completions.gif)
 
 ### 코드 자동추천 in Editor
@@ -37,7 +37,7 @@
 
 #### 코드자동추천 on/off 방법
 코드자동추천 기능을 on/off 하는 방법입니다.
-* 단축키 `ctrl+alt+0` 또는 `마우스 우클릭 > Codev > 코드자동추천 허용 메뉴`를 선택하면 해당 기능이 토글됩니다.
+* 단축키 `ctrl+alt+0` 또는 `마우스 우클릭 > CODEV > 코드자동추천 허용 메뉴`를 선택하면 해당 기능이 토글됩니다.
 * 상태바의 아이콘(![on](./manual/images/corus-auto-on.png), ![off](./manual/images/corus-auto-off.png))을 클릭하면 해당 기능이 토글됩니다. 
 
 <!--
@@ -49,19 +49,19 @@
 5. 경우에 따라 IDE를 재실행한다.
 
 ### Code Explanation
-1. 코드 파일에서 설명을 원하는 코드를 블록으로 잡고, 단축키 `ctrl+alt+2` 또는 `마우스 우클릭 > Codev > Explanation` 메뉴를 선택한다.
-2. `Codev` 툴 윈도우에 결과가 출력된다.
+1. 코드 파일에서 설명을 원하는 코드를 블록으로 잡고, 단축키 `ctrl+alt+2` 또는 `마우스 우클릭 > CODEV > Explanation` 메뉴를 선택한다.
+2. `CODEV` 툴 윈도우에 결과가 출력된다.
 
 ### Code Comment
-1. 코드 파일에서 설명을 원하는 코드를 블록으로 잡고, 단축키 `ctrl+alt+3` 또는 `마우스 우클릭 > Codev > Comment` 메뉴를 선택한다.
-2. `Codev` 툴 윈도우에 결과가 출력되고, `Accept` 링크를 누르면 해당 코드가 반영된다.
+1. 코드 파일에서 설명을 원하는 코드를 블록으로 잡고, 단축키 `ctrl+alt+3` 또는 `마우스 우클릭 > CODEV > Comment` 메뉴를 선택한다.
+2. `CODEV` 툴 윈도우에 결과가 출력되고, `Accept` 링크를 누르면 해당 코드가 반영된다.
 
 ### Test Code Generation
-1. 코드 파일에서 설명을 원하는 코드를 블록으로 잡고, 단축키 `ctrl+alt+4` 또는 `마우스 우클릭 > Codev > Test Code Generation` 메뉴를 선택한다.
-2. `Codev` 툴 윈도우에 결과가 출력되고, `Accept` 링크를 누르면 해당 코드가 반영된다.
+1. 코드 파일에서 설명을 원하는 코드를 블록으로 잡고, 단축키 `ctrl+alt+4` 또는 `마우스 우클릭 > CODEV > Test Code Generation` 메뉴를 선택한다.
+2. `CODEV` 툴 윈도우에 결과가 출력되고, `Accept` 링크를 누르면 해당 코드가 반영된다.
 
-### Codev Chat
-1. IDE 우측에 있는 `Codev` 툴 윈도우 내 `Codev Chat` 탭을 선택한다.
+### CODEV Chat
+1. IDE 우측에 있는 `CODEV` 툴 윈도우 내 `CODEV Chat` 탭을 선택한다.
 2. 패널 하단에 있는 입력 창에 질문을 입력하고, Enter 키 또는 Submit 버튼을 누른다.
 3. "Clear All" 링크를 클릭하면 이전 히스토리가 삭제된다.
 
@@ -70,7 +70,7 @@
 - Code Explanation: 코드 분석/설명
 - Code Comment 생성: 코드에 대한 주석 생성
 - Test Code Generation: 테스트 코드 생성
-- Codev Chat: 챗 형태 질의응답
+- CODEV Chat: 챗 형태 질의응답
 - (예정) Code Translation: 다른 언어로 변환
 - (예정) Bug fix
 
@@ -82,7 +82,7 @@
 **A: 커서 앞쪽으로 100글자를 전송하고 있습니다. (튜닝 사항입니다.)**
 
 **Q: 단축키가 마음에 안들어요.**  
-**A: 설정 > 키맵 or keymap 검색 > 플러그인 > Codev에서 단축키를 바꿀 수 있습니다.**
+**A: 설정 > 키맵 or keymap 검색 > 플러그인 > CODEV에서 단축키를 바꿀 수 있습니다.**
 
 ## 피드백 반영 및 개선 사항
 - 6/1: 블록을 잡은 경우, 블록 다음에 코드 반영 (류창희M 요청건)
