@@ -14,7 +14,7 @@ Jupyterlab 용 Code Completion  pip 패키지 소스 입니다.
 
 - pip 를 사용하여 github repository 의 jupyter codevclient package 설치
     
-    : *pip install "git+https://github.com/skaicoding/codev.git#egg=codevclient&subdirectory=jupyter”*
+    : *pip install "git+https://github.com/skaicoding/codev.git#egg=codevclient&subdirectory=jupyter"*
     
 - github 주소 : [**https://github.com/skaicoding/codev/tree/master**](https://github.com/skaicoding/codev/tree/master)
 
