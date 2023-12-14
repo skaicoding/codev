@@ -94,7 +94,6 @@ class CodevClient:
                 print('\033[31m' + f"☞---- server requests.post time : { time.time() - start_time } 초" + '\033[0m')
     
             #토큰 만료되면 재접속 한다.
-            server.json()
             if str(server.json()['code'])  == "-1002":
                 self.connect(self.username, self.password)
                 # self.connect2(self.userkey)
