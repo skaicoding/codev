@@ -108,13 +108,7 @@ class CodevClient:
                 print("추천 코드가 없습니다.")
                 return None
 
-            completionStr = None
-            if 'data' in server.json().keys():
-                if len(server.json()['data']) > 1 and 'text' in server.json()['data'][0]:
-                    completionStr = server.json()['data'][0]['text']
-
-            if not completionStr:
-                print("추천 코드가 없습니다.")
+            completionStr = server.json()['data'][0]['text']
 
             if output == True:
                 print(f"===> completion :\n",completionStr)
