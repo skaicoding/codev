@@ -30,7 +30,8 @@ class CodevClient:
   
     def connect(self, username, password):
         server = requests.post(
-            'https://codev.skcc.com/api/corus/backend/token',
+            #'https://codev.skcc.com/api/corus/backend/token',
+            'http://20.196.224.234/api/corus/backend/token',
             data={'username': username, 'password': password}
         )
         output = server.json()
