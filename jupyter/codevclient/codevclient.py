@@ -93,7 +93,8 @@ class CodevClient:
                 print('\033[31m' + f"☞---- server.json() :\n  {server.json() }" + '\033[0m')
                 print('\033[31m' + f"☞---- server requests.post time : { time.time() - start_time } 초" + '\033[0m')
     
-            #토큰 만료되면 재접속 한다.             
+            #토큰 만료되면 재접속 한다.
+            server.json()
             if str(server.json()['code'])  == "-1002":
                 self.connect(self.username, self.password)
                 # self.connect2(self.userkey)
@@ -105,8 +106,14 @@ class CodevClient:
                 print("추천 코드가 없습니다.")
                 return None
 
-            completionStr = server.json()['data'][0]['text']
-            
+            completionStr = None
+            if 'data' in server.json().keys():
+                if len(server.json()['data']) > 1 and 'text' in server.json()['data'][0]:
+                    completionStr = server.json()['data'][0]['text']
+
+            if not completionStr:
+                print("추천 코드가 없습니다.")
+
             if output == True:
                 print(f"===> completion :\n",completionStr)
             return code.replace(placeholder, completionStr.strip())
