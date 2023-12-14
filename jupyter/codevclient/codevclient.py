@@ -86,8 +86,7 @@ class CodevClient:
                 "file_name": "nb.py",
                 "before_code": before,
                 "after_code": after,
-                "language": None,
-                "repo_name": None,
+                "language": "python",
             }
             server = self.serverStr(data)            
             if debug:
@@ -101,7 +100,10 @@ class CodevClient:
                 server = self.serverStr(data)   
                 
                 if debug:
-                    print('\033[31m' + f"☞---- reconnect time : { time.time() - start_time } 초" + '\033[0m')                               
+                    print('\033[31m' + f"☞---- reconnect time : { time.time() - start_time } 초" + '\033[0m')
+            elif str(server.json()['code']) == "-10101":
+                print("추천 코드가 없습니다.")
+                return None
 
             completionStr = server.json()['data'][0]['text']
             
@@ -109,8 +111,7 @@ class CodevClient:
                 print(f"===> completion :\n",completionStr)
             return code.replace(placeholder, completionStr.strip())
         except requests.exceptions.RequestException as e:
-            print("An completion error occurred:", e) 
-            
+            print("An completion error occurred:", e)
             return None
 
 def connectCodev(username, password):
