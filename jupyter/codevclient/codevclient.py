@@ -86,6 +86,8 @@ class CodevClient:
                 "file_name": "nb.py",
                 "before_code": before,
                 "after_code": after,
+                "language": None,
+                "repo_name": None,
             }
             server = self.serverStr(data)            
             if debug:
