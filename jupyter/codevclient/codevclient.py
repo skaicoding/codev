@@ -30,8 +30,8 @@ class CodevClient:
   
     def connect(self, username, password):
         server = requests.post(
-            #'https://codev.skcc.com/api/corus/backend/token',
             'http://20.196.224.234/api/corus/backend/token',
+            #'https://codev.skcc.com/api/corus/backend/token',
             data={'username': username, 'password': password}
         )
         output = server.json()
@@ -39,7 +39,8 @@ class CodevClient:
    
     def connect2(self, userkey):      
         server = requests.post(
-            'https://codev.skcc.com/api/corus/backend/dashboard/iam/authDevice/',
+            'http://20.196.224.234/api/corus/backend/dashboard/iam/authDevice/',
+            #'https://codev.skcc.com/api/corus/backend/dashboard/iam/authDevice/',
             headers={
                 'user-key': userkey,
                 'Content-Type': 'application/json',
@@ -68,7 +69,8 @@ class CodevClient:
 
     def serverStr(self, data):
         server = requests.post(
-            'https://codev.skcc.com/api/corus/backend/completions?type=editor',
+            'http://20.196.224.234/api/corus/backend/completions?type=editor',
+            #'https://codev.skcc.com/api/corus/backend/completions?type=editor',
             headers={
                 'Authorization': 'Bearer ' + self.token,
                 'Content-Type': 'application/json',
