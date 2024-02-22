@@ -69,8 +69,8 @@ class CodevClient:
 
     def serverStr(self, data):
         server = requests.post(
-            'http://20.196.224.234/api/corus/backend/completions?type=editor',
-            #'https://codev.skcc.com/api/corus/backend/completions?type=editor',
+            #'http://20.196.224.234/api/corus/backend/completions?type=editor',
+            'https://codev.skcc.com/api/corus/backend/completions?type=editor',
             headers={
                 'Authorization': 'Bearer ' + self.token,
                 'Content-Type': 'application/json',
