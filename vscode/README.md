@@ -117,4 +117,4 @@ Codev를 사용하기 위해서는 사용자 등록 시 발급 받은 `API Key`�
 
 해당 서비스와 관련하여 추가 문의사항이 있을 경우,
 
-Contact: [aicoding@sk.com](mailto:aicoding@sk.com) 로 문의하시길 바랍니다.
+Contact: [github]("https://github.com/skaicoding/codev/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=") / [mail](mailto:aicoding@sk.com) 로 문의하시길 바랍니다.
